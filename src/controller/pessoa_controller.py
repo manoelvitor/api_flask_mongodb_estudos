@@ -17,7 +17,6 @@ controller_bp = Blueprint('controller', __name__)
 app = server.app
 api = server.api
 
-
 @api.route('/pessoas')
 class Pessoas(Resource): 
     @api.expect(model)

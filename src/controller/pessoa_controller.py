@@ -17,6 +17,9 @@ controller_bp = Blueprint('controller', __name__)
 app = server.app
 api = server.api
 
+
+
+
 @api.route('/pessoas')
 class Pessoas(Resource): 
     @api.expect(model)
@@ -60,7 +63,7 @@ class Pessoa(Resource):
         pessoa = db.col.find_one({'pessoa_id': int(id)})
         if pessoa:
             service.update(id, nome, email, telefone, endereco)
-            return  Response({'Dados Atualizados'}, status=200, mimetype='application/json')
+            return  Response({'Dados Atualizados'}, status=204, mimetype='application/json')
         else:
             return  Response({'Não foi possivel atualizar, verifique os dados'}, status=204, mimetype='application/json')  
   

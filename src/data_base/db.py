@@ -1,6 +1,7 @@
 from pymongo import MongoClient
 from mongoengine import connect
 
+
 from flask import Blueprint
 
 data_base_bp = Blueprint('data_base', __name__)
@@ -14,6 +15,8 @@ class ConectDataBase():
 
 
 db = ConectDataBase()
+
+
 
 
 

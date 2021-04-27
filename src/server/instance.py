@@ -2,6 +2,9 @@ from flask import Flask, Blueprint
 from flask_restplus import Api
 
 
+
+
+
 server_bp = Blueprint('server', __name__)
 
 
@@ -18,12 +21,14 @@ class Server():
             description='Api simples para cadastro de pessoa, com fins de estudo (ESTÁGIO)',
             doc='/docs'
         )
-    
+
     # para startar a aplicação
     def run(self,):
         self.app.run(
             debug= True
         )
+  
+
 
 #instanciando o server para ser usado no main
 

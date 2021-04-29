@@ -3,6 +3,7 @@ from mongoengine import connect
 from src.model.pessoa import Pessoa
 from src.data_base.db import db
 
+
 from flask import Blueprint
 
 service_bp = Blueprint('service', __name__)
@@ -54,7 +55,7 @@ class PessoaService:
                 'email': self.pessoa['email'],
                 'telefone': self.pessoa['telefone'],
                 'endereco': self.pessoa['endereco'],
-                'data_criacao': self.pessoa['data_criacao']
+                #'data_criacao': self.pessoa['data_criacao']
             }
         else:
             self.data = 'Sem resultados'
@@ -69,10 +70,6 @@ class PessoaService:
             resposta = 'Não foi possivel deletar'
         return resposta
       
-
-
-
-
 
 
 service = PessoaService()

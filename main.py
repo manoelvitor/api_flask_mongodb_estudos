@@ -17,3 +17,4 @@ server.app.register_blueprint(server_bp)
 
 
 server.run()
+
